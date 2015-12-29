@@ -9,7 +9,7 @@
 	
 </div>
 
-<script type="text/javascript" src="../core/dependencies/3d.min.js"></script>
+<script type="text/javascript" src="../core/dependencies/threejs/3d.min.js"></script>
 <script type="text/javascript" src="../core/dependencies/threejs/OrbitControls.js"></script>
 <script type="text/javascript" src="../core/cube.js"></script>
 
@@ -21,9 +21,9 @@
 		console.log(f);
 	}
 
-	var c = new theCube('newscube', callback, faces);
+	var newsCube = new NewsCube('newscube', callback, faces);
 
-	c.start();
+	newsCube.start();
 
 </script>
 

@@ -4,7 +4,7 @@ TODO: Add licence details here
 
 /**
 
-theCube(elementID, _onFaceChange, _cubeFaces)
+NewsCube(elementID, _onFaceChange, _cubeFaces)
 
 Parameters:
     elementID: String, the ID of the element that will become the cube container
@@ -15,7 +15,7 @@ Returns: a new cube object.
 
 **/
 
-var theCube = function(elementID, _onFaceChange, _cubeFaces) {
+var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
 
     if (typeof elementID != 'string') return console.warn('elementID MUST be a string.');
     else if (typeof _onFaceChange != 'function') return console.warn('_onFaceChange MUST be a function.');
