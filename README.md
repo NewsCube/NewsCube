@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### NewsCube - Open Source
 NewsCube is a research project that explored hypetertext interactivity by visually representing complex stories on the six faces of a cube.
 
