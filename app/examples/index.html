@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NewsCube Examples</title>
+</head>
+<body>
+
+<div id="newscube">
+	
+</div>
+
+<script type="text/javascript" src="../core/dependencies/3d.min.js"></script>
+<script type="text/javascript" src="../core/dependencies/threejs/OrbitControls.js"></script>
+<script type="text/javascript" src="../core/cube.js"></script>
+
+<script type="text/javascript">
+	
+	var faces = ['faces/front.html', 'faces/right.html', 'faces/back.html', 'faces/left.html', 'faces/bottom.html', 'faces/top.html'];
+
+	var callback = function(f) {
+		console.log(f);
+	}
+
+	var c = new theCube('newscube', callback, faces);
+
+	c.start();
+
+</script>
+
+</body>
+</html>
