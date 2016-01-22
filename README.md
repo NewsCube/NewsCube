@@ -48,11 +48,12 @@ newsCube.start();
 Find out more about what you can do with the [NewsCube API](ADVANCED.md) 
 
 # Find out more
-
+To find out more about NewsCubed head to our website: website: http://newscubed.com
+To try our implementation of the NewsCube, head to: http://newscube.io
 
 ## Credits
 The NewsCube was created by Skye Doherty, developed by Andrea Epifani, and made beautiful by David Lloyd
 
 ## Contact
-Get in touch via the NewsCubed website: http://newscubed.com
-Try our implementation at: http://newscube.io
+Get in touch via NewsCubed: http://newscubed.com/contact/
+
