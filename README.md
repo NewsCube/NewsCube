@@ -27,7 +27,7 @@ To add a NewsCube to your project, you should follow three simple steps:
 <div id="newscube"></div>
 ```
 
-### Spin your NewsCube!
+### Make it spin
 ```
 var faces = ['faces/front.html', 
 			 'faces/right.html', 
