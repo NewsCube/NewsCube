@@ -1,14 +1,16 @@
-# NewsCube - Open Source
-The NewsCube is an interactive, 3D storytelling tool that uses a cube to show multiple perspectives on a complex issue. The sides of a NewsCube can be used to hold original or aggregated content in the form of text, images, sounds, vision or documents.
+# NewsCube
+The NewsCube is an interactive, 3D storytelling tool that uses a cube to show multiple perspectives on a complex issue. 
+The sides of a NewsCube can be used to hold original or aggregated content in the form of text, images, sounds, vision or documents.
 
-## Usage
-Use the NewsCube to ...
+### Usage
+Use the code to create a virtual cube, make it rotaate and add content to it. 
 
-## License
-You can integrate NewsCube in your website by folowing a few simple steps. NewsCube is based on the CSS 3D component of [ThreeJS](http://threejs.org) framework.
-NewsCube is distributed under the Apache GNU license ?????. ThreeJS is distributed under the ... license.
+### Contribute
+We welcome contributions to this source code. If you do contribute, then please ...
 
-# Integration
+## Licence
+The NewsCube is released under the Mozilla Public Licence v2.0. 
+This software was made possible using [ThreeJS](http://threejs.org) by mrdoob, licenced under the MIT licence.
 
 ## Simple JavaScript integration
 To add a NewsCube to your project, you should follow three simple steps:
@@ -25,7 +27,7 @@ To add a NewsCube to your project, you should follow three simple steps:
 <div id="newscube"></div>
 ```
 
-### Spin your NewsCube!
+### Make it spin
 ```
 var faces = ['faces/front.html', 
 			 'faces/right.html', 
@@ -48,12 +50,16 @@ newsCube.start();
 Find out more about what you can do with the [NewsCube API](ADVANCED.md) 
 
 # Find out more
-To find out more about NewsCubed head to our website: website: http://newscubed.com
 To try our implementation of the NewsCube, head to: http://newscube.io
+To find out more about the NewsCubed project head to our website: website: http://newscubed.com
 
-## Credits
-The NewsCube was created by Skye Doherty, developed by Andrea Epifani, and made beautiful by David Lloyd
+### Credits
+The NewsCube was created by [Skye Doherty](http://skyedoherty.com), developed by [Andrea Epifani] (http://andreaepifani.com), and made beautiful by [David Lloyd] (http://www.dld.net.au)
 
-## Contact
-Get in touch via NewsCubed: http://newscubed.com/contact/
+### Contact
+Email: cube@newscube.io
+
+
+
+
 
