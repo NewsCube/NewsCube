@@ -6,7 +6,7 @@ The sides of a NewsCube can be used to hold original or aggregated content in th
 Use the code to create a virtual cube, make it rotaate and add content to it. 
 
 ### Contribute
-We welcome contributions to this source code. If you do contribute, then please ...
+We welcome contributions via Pull Requests. Please, feel free to submit your PR - we will welcome any improvement to the project :)
 
 ## Licence
 The NewsCube is released under the Mozilla Public Licence v2.0. 
