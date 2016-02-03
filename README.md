@@ -3,7 +3,7 @@ The NewsCube is an interactive, 3D storytelling tool that uses a cube to show mu
 The sides of a NewsCube can be used to hold original or aggregated content in the form of text, images, sounds, vision or documents.
 
 ### Usage
-Use the code to create an interactive 3D cube that ...
+Use the code to create a virtual cube, make it rotaate and add content to it. 
 
 ### Contribute
 We welcome contributions to this source code. If you do contribute, then please ...
