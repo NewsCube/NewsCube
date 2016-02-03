@@ -1,0 +1,89 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish', './' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.6
+4 verbose publish [ './' ]
+5 silly cache add args [ './', null ]
+6 verbose cache add spec ./
+7 silly cache add parsed spec { raw: './',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: './',
+7 silly cache add   spec: '/Users/Andx/Documents/Work/NewsCube/NewsCubeOpenSource/NewsCube',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/Andx/.npm/NewsCube/1.0.0/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/Andx/.npm/NewsCube/1.0.0/package.tgz',
+9 verbose tar pack   '/Users/Andx/Documents/Work/NewsCube/NewsCubeOpenSource/NewsCube' ]
+10 verbose tarball /Users/Andx/.npm/NewsCube/1.0.0/package.tgz
+11 verbose folder /Users/Andx/Documents/Work/NewsCube/NewsCubeOpenSource/NewsCube
+12 info prepublish NewsCube@1.0.0
+13 verbose addLocalTarball adding from inside cache /Users/Andx/.npm/NewsCube/1.0.0/package.tgz
+14 silly cache afterAdd NewsCube@1.0.0
+15 verbose afterAdd /Users/Andx/.npm/NewsCube/1.0.0/package/package.json not in flight; writing
+16 verbose afterAdd /Users/Andx/.npm/NewsCube/1.0.0/package/package.json written
+17 silly publish { name: 'NewsCube',
+17 silly publish   private: false,
+17 silly publish   version: '1.0.0',
+17 silly publish   description: 'News Cube',
+17 silly publish   repository: { type: 'git', url: 'git://github.com/NewsCube/NewsCube.git' },
+17 silly publish   author: { name: 'Skye Doherty, Andrea Epifani, David Lloyd' },
+17 silly publish   license: 'Mozilla Public License Version 2.0',
+17 silly publish   readme: '# NewsCube\nThe NewsCube is an interactive, 3D storytelling tool that uses a cube to show multiple perspectives on a complex issue. \nThe sides of a NewsCube can be used to hold original or aggregated content in the form of text, images, sounds, vision or documents.\n\n### Usage\nUse the code to create a virtual cube, make it rotaate and add content to it. \n\n### Contribute\nWe welcome contributions to this source code. If you do contribute, then please ...\n\n## Licence\nThe NewsCube is released under the Mozilla Public Licence v2.0. \nThis software was made possible using [ThreeJS](http://threejs.org) by mrdoob, licenced under the MIT licence.\n\n## Simple JavaScript integration\nTo add a NewsCube to your project, you should follow three simple steps:\n\n### Include the NewsCube JavaScript core files\n```\n<script type="text/javascript" src="newscube/core/dependencies/threejs/3d.min.js"></script>\n<script type="text/javascript" src="newscube/core/dependencies/threejs/OrbitControls.js"></script>\n<script type="text/javascript" src="newscube/core/cube.js"></script>\n```\n\n### Create a NewsCube container\n```\n<div id="newscube"></div>\n```\n\n### Make it spin\n```\nvar faces = [\'faces/front.html\', \n\t\t\t \'faces/right.html\', \n\t\t\t \'faces/back.html\', \n\t\t\t \'faces/left.html\', \n\t\t\t \'faces/bottom.html\', \n\t\t\t \'faces/top.html\'];\n\nvar callback = function(f) {\n\tconsole.log(f);\n}\n\nvar newsCube = new NewsCube(\'newscube\', callback, faces);\n\nnewsCube.start();\n```\n\n### Advanced guide\n\nFind out more about what you can do with the [NewsCube API](ADVANCED.md) \n\n# Find out more\nTo try our implementation of the NewsCube, head to: http://newscube.io\nTo find out more about the NewsCubed project head to our website: website: http://newscubed.com\n\n### Credits\nThe NewsCube was created by [Skye Doherty](http://skyedoherty.com), developed by [Andrea Epifani] (http://andreaepifani.com), and made beautiful by [David Lloyd] (http://www.dld.net.au)\n\n### Contact\nEmail: cube@newscube.io\n\n\n\n\n\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: 'e2af512d2c27e63e3e0037c4d89803bd81c997e9',
+17 silly publish   bugs: { url: 'https://github.com/NewsCube/NewsCube/issues' },
+17 silly publish   homepage: 'https://github.com/NewsCube/NewsCube#readme',
+17 silly publish   _id: 'NewsCube@1.0.0',
+17 silly publish   scripts: {},
+17 silly publish   _shasum: 'd51e7081f3d6985fbda0517245aab87e784714fe',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name NewsCube
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/NewsCube
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/Andx/.npm/NewsCube/1.0.0/package.tgz
+25 verbose request uri https://registry.npmjs.org/NewsCube
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 10:42:00 PM
+28 verbose request using bearer token for auth
+29 verbose request id abcf5a25abb54dc2
+30 http request PUT https://registry.npmjs.org/NewsCube
+31 http 400 https://registry.npmjs.org/NewsCube
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '54',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Wed, 03 Feb 2016 12:42:03 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-bne7723-BNE',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1454503321.296143,VS0,VE2116' }
+33 verbose request invalidating /Users/Andx/.npm/registry.npmjs.org/NewsCube on PUT
+34 error publish Failed PUT 400
+35 verbose stack Error: name can no longer contain capital letters : NewsCube
+35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+35 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+35 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:354:22)
+35 verbose stack     at Request.emit (events.js:110:17)
+35 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1207:14)
+35 verbose stack     at Request.emit (events.js:129:20)
+35 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1153:12)
+35 verbose stack     at IncomingMessage.emit (events.js:129:20)
+35 verbose stack     at _stream_readable.js:908:16
+35 verbose stack     at process._tickCallback (node.js:355:11)
+36 verbose statusCode 400
+37 verbose pkgid NewsCube
+38 verbose cwd /Users/Andx/Documents/Work/NewsCube/NewsCubeOpenSource/NewsCube
+39 error Darwin 15.4.0
+40 error argv "node" "/usr/local/bin/npm" "publish" "./"
+41 error node v0.12.6
+42 error npm  v2.11.2
+43 error code E400
+44 error name can no longer contain capital letters : NewsCube
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
