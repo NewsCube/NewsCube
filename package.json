@@ -1,16 +1,12 @@
 {
   "name": "NewsCube",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "description": "News Cube",
-  "keywords": [],
-  "dependencies": {
-  },
-  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/NewsCube/NewsCube.git"
   },
-  "author": "Andrea Epifani, Skye Doherty, David Lloyd",
-  "license": "Apache GPL"
+  "author": "Skye Doherty, Andrea Epifani, David Lloyd",
+  "license": "Mozilla Public License Version 2.0"
 }
