@@ -1,21 +1,21 @@
 /**
-TODO: Add licence details here
-**/
+ TODO: Add licence details here
+ **/
 
 /**
 
-NewsCube(elementID, _onFaceChange, _cubeFaces)
+ NewsCube(elementID, _onFaceChange, _cubeFaces)
 
-Parameters:
-    elementID: String, the ID of the element that will become the cube container
-    _onFaceChance: callback function called when the cube spins to a new face (experimental)
-    _cubeFaces: an array containing 6 strings which represt the faces of the cube. The array must contain 6 elements ordered as follows: [Front, Right, Back, Left, Bottom, Top]
+ Parameters:
+ elementID: String, the ID of the element that will become the cube container
+ _onFaceChance: callback function called when the cube spins to a new face (experimental)
+ _cubeFaces: an array containing 6 strings which represt the faces of the cube. The array must contain 6 elements ordered as follows: [Front, Right, Back, Left, Bottom, Top]
 
-Returns: a new cube object. 
+ Returns: a new cube object.
 
-**/
+ **/
 
-var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
+var NewsCube = function (elementID, _onFaceChange, _cubeFaces) {
 
     if (typeof elementID != 'string') return console.warn('elementID MUST be a string.');
     else if (typeof _onFaceChange != 'function') return console.warn('_onFaceChange MUST be a function.');
@@ -74,9 +74,9 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
     var kontainer;
 
     var faceCoords = [{
-            p: Math.PI / 2,
-            t: 0
-        }, //1
+        p: Math.PI / 2,
+        t: 0
+    }, //1
         {
             p: Math.PI / 2,
             t: Math.PI / 2
@@ -118,7 +118,7 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
 
     function setCreateSizes() {
         WIDTH = 700;
-        HEIGHT = 600; 
+        HEIGHT = 600;
         CREATING = true;
     }
 
@@ -226,7 +226,7 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
         document.addEventListener('touchend', onDocumentTouchEnd, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
 
-        document.addEventListener('keyup', function(e) {
+        document.addEventListener('keyup', function (e) {
 
             rotateToPosition(e.keyCode);
             return false;
@@ -389,11 +389,12 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
             // kontainer.style.background = "#ff0000";
             // kontainer.style.opacity = ".5";
 
-            var mousedownEvent = document.createEvent("MouseEvent");
-            mousedownEvent.initMouseEvent("mousedown", true, true, document, 0,
-                t.screenX, t.screenY, t.clientX, t.clientY,
-                false, false, false, false,
-                0, null);
+            var mousedownEvent = new MouseEvent('mousedown');
+            mousedownEvent.clientX = t.clientX;
+            mousedownEvent.clientY = t.clientY;
+            mousedownEvent.screenX = t.screenX;
+            mousedownEvent.screenY = t.screenY;
+
             kontainer.dispatchEvent(mousedownEvent);
 
         }
@@ -415,11 +416,12 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
 
             clickedSomewhere = true;
 
-            var mousemoveEvent = document.createEvent("MouseEvent");
-            mousemoveEvent.initMouseEvent("mousemove", true, true, document, 0,
-                t.screenX, t.screenY, t.clientX, t.clientY,
-                false, false, false, false,
-                0, null);
+            var mousemoveEvent = new MouseEvent('mousemove');
+            mousemoveEvent.clientX = t.clientX;
+            mousemoveEvent.clientY = t.clientY;
+            mousemoveEvent.screenX = t.screenX;
+            mousemoveEvent.screenY = t.screenY;
+
             kontainer.dispatchEvent(mousemoveEvent);
 
         }
@@ -428,12 +430,7 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
 
     function onDocumentTouchEnd(event) {
 
-        // event.preventDefault();
-
-        // tsEventHandler.preventDefault();
-
-        var mouseupEvent = document.createEvent("MouseEvent");
-        mouseupEvent.initMouseEvent("mouseup", true, true);
+        var mouseupEvent = new MouseEvent('mouseup');
         kontainer.dispatchEvent(mouseupEvent);
 
         clickedSomewhere = false;
@@ -442,13 +439,14 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
     }
 
     function onContainerMouseEnter(event) {
-        if (!isAnimated) return ;
+        if (!isAnimated) return;
         controls.setAutorotate(false);
     }
+
     function onContainerMouseOut(event) {
-        if (!isAnimated) return ;
-        if(event.toElement && event.toElement.nodeName == "IFRAME" || event.fromElement.nodeName == "IFRAME") return ;
-        if(event.toElement && event.toElement.id == "cubeContainerMouseHandler") return ;
+        if (!isAnimated) return;
+        if (event.toElement && event.toElement.nodeName == "IFRAME" || event.fromElement.nodeName == "IFRAME") return;
+        if (event.toElement && event.toElement.id == "cubeContainerMouseHandler") return;
         controls.setAutorotate(true);
     }
 
@@ -471,11 +469,16 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
 
             kontainer.style.left = "0px";
 
-            var mousedownEvent = document.createEvent("MouseEvent");
-            mousedownEvent.initMouseEvent("mousedown", true, true, document, 0,
-                event.screenX, event.screenY, event.clientX, event.clientY,
-                event.ctrlKey, event.altKey, event.shiftKey, event.metaKey,
-                0, null);
+            var mousedownEvent = new MouseEvent('mousedown');
+            mousedownEvent.clientX = event.clientX;
+            mousedownEvent.clientY = event.clientY;
+            mousedownEvent.screenX = event.screenX;
+            mousedownEvent.screenY = event.screenY;
+            mousedownEvent.ctrlKey = event.ctrlKey;
+            mousedownEvent.altKey = event.altKey;
+            mousedownEvent.shiftKey = event.shiftKey;
+            mousedownEvent.metaKey = event.metaKey;
+
             kontainer.dispatchEvent(mousedownEvent);
 
         }
@@ -549,7 +552,6 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
 
         requestAnimationFrame(animate);
         controls.update();
-
 
 
         render();
@@ -744,7 +746,7 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
 
     return {
 
-        start: function(cube, params) {
+        start: function (cube, params) {
 
             // console.log(params);
 
@@ -781,24 +783,24 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
             isAnimated = false;
 
         },
-        setOnFaceChange: function(ofc) {
+        setOnFaceChange: function (ofc) {
             onFaceChange = ofc;
         },
-        setToCreate: function() {
+        setToCreate: function () {
             setCreateSizes();
         },
-        rotateTo: function(face) {
+        rotateTo: function (face) {
             // console.log("Rotating to... ", face);
             rotateToFace(face);
         },
-        zoomToEdit: function() {
+        zoomToEdit: function () {
             isPlaymode = false;
             controls.zoomInTo(1.1);
         },
-        exitZoomToEdit: function() {
+        exitZoomToEdit: function () {
             controls.zoomOutTo(1);
         },
-        delete: function() {
+        delete: function () {
 
             var k = document.getElementById(eid);
             if (k) k.innerHTML = "&nbsp;";
@@ -807,20 +809,20 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
             isAnimated = false;
 
         },
-        suspend: function() {
+        suspend: function () {
             var k = document.getElementById(eid);
             if (k) k.style.display = "none";
         },
-        restore: function() {
+        restore: function () {
             var k = document.getElementById(eid);
             if (k) k.style.display = "block";
         },
-        startPlay: function() {
+        startPlay: function () {
             isPlaymode = true;
             init();
             controls.zoomInTo(1.1);
         },
-        scale: function(w, h) {
+        scale: function (w, h) {
             WIDTH = w ? w : WIDTH;
             HEIGHT = h ? h : HEIGHT;
 
@@ -832,27 +834,27 @@ var NewsCube = function(elementID, _onFaceChange, _cubeFaces) {
 
             renderer.setSize(WIDTH, HEIGHT);
         },
-        animate: function(r) {
+        animate: function (r) {
             // rotateToPosition(51);
             // console.log(r);
             isAnimated = r;
             controls.setAutorotate(r);
         },
-        moveaway: function(done) {
+        moveaway: function (done) {
             done();
             //controls.animateZoomTo(-1, done);
             //ZOOMEDOUT = true;
         },
-        moveback: function(done) {
+        moveback: function (done) {
             done();
             //controls.animateZoomTo(1, done);
             //ZOOMEDOUT = false;
         },
-        moveThreeView: function() {
+        moveThreeView: function () {
             controls.animateTo(faceCoords[6].p, faceCoords[6].t, rSpeed);
             // console.log(rSpeed);
         },
-        setExhibition: function() {
+        setExhibition: function () {
             HEIGHT = HEIGHT - 185;
             this.scale(WIDTH, HEIGHT);
             // console.log(rSpeed);
