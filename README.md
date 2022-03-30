@@ -58,7 +58,7 @@ To find out more about the NewsCubed project head to our website: website: http:
 The NewsCube was created by [Skye Doherty](http://skyedoherty.com), developed by [Andrea Epifani] (http://andreaepifani.com), and made beautiful by [David Lloyd] (http://www.dld.net.au)
 
 ### Contact
-Email: cube@newscube.io
+Email: cube@newscubed.com
 
 
 
